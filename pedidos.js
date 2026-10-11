@@ -17,8 +17,7 @@ function registrarPedido(cliente, producto, cantidad) {
         !cliente.trim() ||
         !producto.trim() ||
         !Number.isInteger(cantidadNumero) ||
-        cantidadNumero > 0
-  
+        cantidadNumero <= 0
     ) {
         throw new Error("Los datos del pedido no son válidos.");
     }
